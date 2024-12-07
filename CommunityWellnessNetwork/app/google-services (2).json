@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "26517820657",
+    "project_id": "communitywellnessnetwork-b382c",
+    "storage_bucket": "communitywellnessnetwork-b382c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26517820657:android:7ca7c791548a76b6760550",
+        "android_client_info": {
+          "package_name": "com.example.communitywellnessNetwork"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOdnthDfIVeOaz9qgWaUGClMmo2gcggng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
