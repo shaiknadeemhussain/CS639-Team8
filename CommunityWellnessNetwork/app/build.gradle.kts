@@ -78,6 +78,7 @@ dependencies {
 
     // WorkManager for Background Tasks
     implementation("androidx.work:work-runtime-ktx:2.8.1")
+    implementation(libs.androidx.navigation.runtime.ktx)
 
     // Testing Dependencies
     testImplementation("junit:junit:4.13.2")
