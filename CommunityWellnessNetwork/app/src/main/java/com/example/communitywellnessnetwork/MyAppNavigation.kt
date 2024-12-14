@@ -36,7 +36,24 @@ fun MyAppNavigation(modifier: Modifier = Modifier, authViewModel: AuthViewModel)
             composable("signup") {
                 SignupPage(modifier, navController, authViewModel)
             }
-            
+            composable("break_schedule") {
+                // Make sure to pass the authViewModel here
+                BreakSchedulePage(
+                    modifier = modifier,
+                    navController = navController,
+                    authViewModel = authViewModel,
+                    onBreaksUpdated = { newStartHour, newEndHour, breaks, water, food ->
+                        startHour = newStartHour
+                        endHour = newEndHour
+                        upcomingBreaks.clear()
+                        upcomingBreaks.addAll(breaks)
+                        waterReminders.clear()
+                        waterReminders.addAll(water)
+                        foodReminders.clear()
+                        foodReminders.addAll(food)
+                    }
+                    )
+                }
             composable("mindfulness") {
                 MindfulnessActivityPage(modifier, navController)
             }
@@ -53,6 +70,11 @@ fun MyAppNavigation(modifier: Modifier = Modifier, authViewModel: AuthViewModel)
             }
         }
     )
-
+    LaunchedEffect(authState) {
+        if (authState is AuthState.Unauthenticated) {
+            navController.navigate("login") {
+                popUpTo("break_schedule") { inclusive = true }  // Clear back stack after logging out
+            }
+        }
    
 }
