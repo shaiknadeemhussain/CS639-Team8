@@ -1,4 +1,4 @@
-package com.example.login
+package com.example.communitywellnessnetwork
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,9 +9,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.login.ui.theme.LoginTheme
-import com.example.login.ui.theme.AuthViewModel
-import com.example.login.MyAppNavigation
+import com.example.communitywellnessnetwork.ui.theme.LoginTheme
+import com.example.communitywellnessnetwork.ui.theme.AuthViewModel
+import com.example.communitywellnessnetwork.MyAppNavigation
 
 class MainActivity : ComponentActivity() {
     private val authViewModel: AuthViewModel by viewModels() // ViewModel initialized here
