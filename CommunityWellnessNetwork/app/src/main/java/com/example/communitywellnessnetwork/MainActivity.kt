@@ -1,27 +1,32 @@
-package com.example.communitywellnessnetwork
+package com.example.login
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.communitywellnessnetwork.ui.theme.CommunityWellnessNetworkTheme
-import com.google.firebase.auth.FirebaseAuth
+import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.ui.Modifier
+import com.example.login.ui.theme.LoginTheme
+import com.example.login.ui.theme.AuthViewModel
+import com.example.login.MyAppNavigation
 
 class MainActivity : ComponentActivity() {
+    private val authViewModel: AuthViewModel by viewModels() // ViewModel initialized here
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()  // To make the app go edge-to-edge
 
-        // Set the content view using Jetpack Compose
         setContent {
-            CommunityWellnessNetworkTheme {
-                // Your UI Composables here, like the main screen
+            LoginTheme {
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    // Pass authViewModel to the navigation function
+                    MyAppNavigation(modifier = Modifier.padding(innerPadding), authViewModel = authViewModel)
+                }
             }
-        }
-
-        // Example of Firebase Authentication (if needed)
-        val auth = FirebaseAuth.getInstance()
-        auth.addAuthStateListener {
-            // Handle authentication state changes
         }
     }
 }
