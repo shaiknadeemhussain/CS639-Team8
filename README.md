@@ -3,17 +3,4 @@
 Community Wellness Network
 Problem: People often lack a support system for achieving their wellness goals.
 
-
-Target Users: Office workers, students, and remote employees.
-Major Features:
-AI-generated break schedules based on workload.
-Guided mindfulness activities during breaks (e.g., 5-minute meditations).
-Integration with calendar apps for seamless scheduling.
-Break analytics to track frequency and benefits.
-Uniqueness:
-Dynamic scheduling adapts to user’s work intensity.
-Integrates productivity tools like Google Calendar or Microsoft Outlook.
-Technologies:
-Calendar API for event synchronization.
-SharedPreferences for storing preferences locally.
-Jetpack Compose for professional and streamlined UI.
+For more details, [click here](https://docs.google.com/presentation/d/e/2PACX-1vTwW5_rcjfjJFFnYEmcAgrIrSTL1tJqedz8gOo4v4Vrc0I4NEsC-6qpSbuIGIuJGUL16PWOgN37XQQr/pub?start=true&loop=true&delayms=3000).
